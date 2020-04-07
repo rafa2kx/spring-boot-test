@@ -1,0 +1,75 @@
+= Gateway Manager Documentation
+
+The following are all services running at http://localhost:8080
+
+=== Gateway List
+
+Returns a list of all stored gateways and it's associated devices.
+include::../../../target/snippets/gateways/get/curl-request.adoc[]
+
+.request
+include::../../../target/snippets/gateways/get/http-request.adoc[]
+
+.response
+include::../../../target/snippets/gateways/get/http-response.adoc[]
+
+.Response Fields Descriptions
+include::../../../target/snippets/gateways/get/response-fields.adoc[]
+As you can see the format is very simple, and in fact you always get the same message.
+
+=== Create New Gateway
+
+Creates a new gateway with devices.
+include::../../../target/snippets/gateways/post/curl-request.adoc[]
+
+.request
+include::../../../target/snippets/gateways/post/http-request.adoc[]
+
+.response
+include::../../../target/snippets/gateways/post/http-response.adoc[]
+
+.Request Fields Descriptions
+include::../../../target/snippets/gateways/post/request-fields.adoc[]
+
+==== Error response
+include::../../../target/snippets/gateways/post/error/http-response.adoc[]
+include::../../../target/snippets/gateways/post/error/response-fields.adoc[]
+
+=== Add Device to Gateway
+
+Add new device to the gateway identified in the URL.
+----
+/api/v1/devices/${gatewayId}
+----
+include::../../../target/snippets/devices/post/curl-request.adoc[]
+
+.request
+include::../../../target/snippets/devices/post/http-request.adoc[]
+
+.response
+include::../../../target/snippets/devices/post/http-response.adoc[]
+
+.Request Fields Descriptions
+include::../../../target/snippets/devices/post/request-fields.adoc[]
+
+==== Error response
+include::../../../target/snippets/devices/post/error/http-response.adoc[]
+include::../../../target/snippets/devices/post/error/response-fields.adoc[]
+
+=== Remove Device from Gateway
+
+Deletes the specified device.
+----
+/api/v1/devices/${deviceId}
+----
+include::../../../target/snippets/devices/delete/curl-request.adoc[]
+
+.request
+include::../../../target/snippets/devices/delete/http-request.adoc[]
+
+.response
+include::../../../target/snippets/devices/delete/http-response.adoc[]
+
+==== Error response
+include::../../../target/snippets/devices/delete/error/http-response.adoc[]
+include::../../../target/snippets/devices/delete/error/response-fields.adoc[]
