@@ -10,7 +10,7 @@
 4. Run command `java -jar ./gateway-0.0.1.jar`
 5. Enjoy!
 
-* [API Documentation](http://localhost:8080/docs/index.html) 
+* [API Documentation]. Deploy the app and go to /docs/index.html. 
 
 
 ### Reference Documentation
